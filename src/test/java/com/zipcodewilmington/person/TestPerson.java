@@ -95,4 +95,36 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testConstructorWithAllParams(){
+        int expectedWeight = 155;
+        int expectedHeightInInches = 68;
+        Boolean expectedZipCoder = true;
+        String expectedName = "Jeremy";
+        int expectedAge = 23;
+
+        Person person = new Person();
+
+        person.setAge(expectedAge);
+        person.setName(expectedName);
+        person.setHeight(expectedHeightInInches);
+        person.setWeight(expectedWeight);
+        person.setZipCoder(expectedZipCoder);
+
+        String actualName = person.getName();
+        int actualAge = person.getAge();
+        int actualWeight = person.getWeight();
+        int actualHeight = person.getHeight();
+        Boolean actualZipCoder = person.getZipCoder();
+
+        Assert.assertEquals(expectedAge,actualAge);
+        Assert.assertEquals(expectedZipCoder,actualZipCoder);
+        Assert.assertEquals(expectedWeight,actualWeight);
+        Assert.assertEquals(expectedName,actualName);
+        Assert.assertEquals(expectedHeightInInches,actualHeight);
+
+    }
+
+
 }
